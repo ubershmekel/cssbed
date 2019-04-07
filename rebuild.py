@@ -39,7 +39,7 @@ def get_themes():
     if os.path.isdir(fn) and not fn.startswith('.'):
       yield fn
 
-themes = list(get_themes())
+themes = sorted(list(get_themes()))
 
 print(themes)
 themes_list_html = '<ul>\n'
