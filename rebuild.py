@@ -18,6 +18,7 @@ link_marker = '<a href="/">'
 base = open('index.html').read()
 
 def render(path):
+  print("path " + path)
   html = base
   snippet_path = os.path.join(path, snippet_fn)
   link_path = os.path.join(path, link_fn)
