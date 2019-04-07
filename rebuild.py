@@ -7,7 +7,7 @@ name_marker = 'CSS Bed'
 snippet_fn = 'snippet.txt'
 link_fn = 'link.txt'
 reset_fn = 'reset.css'
-link_marker = '<a href="/">'
+source_marker = "https://github.com/ubershmekel/cssbed"
 
 '''
 <ul>
@@ -27,7 +27,7 @@ def render(path):
     snippet = open(snippet_path).read()
     html = html.replace(snippet_marker, snippet)
   link = open(link_path).read()
-  html = html.replace(link_marker, '<a href="' + link + '">')
+  html = html.replace(source_marker, link)
   html = html.replace(name_marker, path)
   parts = html.split(list_marker)
   html = parts[0] + themes_list_html + parts[2]
@@ -44,7 +44,7 @@ themes = list(get_themes())
 print(themes)
 themes_list_html = '<ul>\n'
 for theme in themes:
-  themes_list_html += '<li><a href="/' + theme + '">' + theme + '<a/>\n'
+  themes_list_html += '<li><a href="/' + theme + '">' + theme + '</a>\n'
 themes_list_html += '</ul>'
 
 print(themes_list_html)
