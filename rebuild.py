@@ -39,6 +39,7 @@ for fn in os.listdir('.'):
   if os.path.isdir(fn) and not fn.startswith('.'):
     themes.append(fn)
 
+print(themes)
 themes_list_html = '<ul>\n'
 for theme in themes:
   themes_list_html += '<li><a href="/' + theme + '">' + theme + '<a/>\n'
