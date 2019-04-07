@@ -7,6 +7,7 @@ name_marker = 'CSS Bed'
 snippet_fn = 'snippet.txt'
 link_fn = 'link.txt'
 reset_fn = 'reset.css'
+index_fn = 'index.html'
 source_marker = "https://github.com/ubershmekel/cssbed"
 
 '''
@@ -15,7 +16,12 @@ source_marker = "https://github.com/ubershmekel/cssbed"
 </ul>
       '''
 
-base = open('index.html').read()
+base = open(index_fn).read()
+
+def fix_options(html):
+  parts = html.split(list_marker)
+  return parts[0] + list_marker + themes_list_html + list_marker + parts[2]
+
 
 def render(path):
   print("path " + path)
@@ -29,9 +35,8 @@ def render(path):
   link = open(link_path).read()
   html = html.replace(source_marker, link)
   html = html.replace(name_marker, path)
-  parts = html.split(list_marker)
-  html = parts[0] + themes_list_html + parts[2]
-  target = os.path.join(path, 'index.html')
+  html = fix_options(html)
+  target = os.path.join(path, index_fn)
   open(target, 'w').write(html)
 
 def get_themes():
@@ -42,13 +47,20 @@ def get_themes():
 themes = sorted(list(get_themes()))
 
 print(themes)
-themes_list_html = '<ul>\n'
+themes_list_html = '\n    <ul>\n'
 for theme in themes:
-  themes_list_html += '<li><a href="/' + theme + '">' + theme + '</a>\n'
-themes_list_html += '</ul>'
+  themes_list_html += '      <li><a href="/' + theme + '">' + theme + '</a>\n'
+themes_list_html += '    </ul>\n'
 
 print(themes_list_html)
 
 for theme in themes:
   print("rendering " + theme)
   render(theme)
+
+# Mainly render the root to update the theme list.
+# Also, this is kind of recursive in a trippy way.
+html = open(index_fn).read()
+open(index_fn, 'w').write(fix_options(html))
+
+
