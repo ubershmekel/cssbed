@@ -30,7 +30,7 @@ def render(path):
   html = html.replace(link_marker, '<a href="' + link + '">')
   html = html.replace(name_marker, path)
   parts = html.split(list_marker)
-  html = parts[0] + themes_list_html + parts[1]
+  html = parts[0] + themes_list_html + parts[2]
   target = os.path.join(path, 'index.html')
   open(target, 'w').write(html)
 
