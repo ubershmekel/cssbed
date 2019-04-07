@@ -34,10 +34,12 @@ def render(path):
   target = os.path.join(path, 'index.html')
   open(target, 'w').write(html)
 
-themes = []
-for fn in os.listdir('.'):
-  if os.path.isdir(fn) and not fn.startswith('.'):
-    themes.append(fn)
+def get_themes():
+  for fn in os.listdir('.'):
+    if os.path.isdir(fn) and not fn.startswith('.'):
+      yield fn
+
+themes = list(get_themes())
 
 print(themes)
 themes_list_html = '<ul>\n'
@@ -49,4 +51,4 @@ print(themes_list_html)
 
 for theme in themes:
   print("rendering " + theme)
-  render(fn)
+  render(theme)
