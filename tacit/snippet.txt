@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.0.min.css" type="text/css">

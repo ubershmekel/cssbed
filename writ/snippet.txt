@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="//writ.cmcenroe.me/1.0.4/writ.min.css" type="text/css">
