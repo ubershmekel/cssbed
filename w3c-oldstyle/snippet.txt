@@ -1,1 +1,0 @@
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/Core/Oldstyle" type="text/css">
