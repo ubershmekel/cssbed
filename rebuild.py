@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+'''
+This script copies and templates the index.html for the various classless frameworks.
+
+Check out http://cssbed.com for more info.
+'''
+
+
 import os
 
 
