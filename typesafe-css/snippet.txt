@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="https://bradleytaunt.com/typesafe-css/typesafe.css">
