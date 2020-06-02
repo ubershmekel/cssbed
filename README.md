@@ -8,3 +8,6 @@ Giant UI frameworks are nice, but sometimes you just need to start somewhere wit
 
 Make sure to run `rebuild.py` to generate all the html files before sending a pull request.
 
+# Why class-less CSS
+
+See this blog post: https://blog.usejournal.com/the-next-css-frontier-classless-5e66f3f25fdd
