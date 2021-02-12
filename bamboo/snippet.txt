@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rilwis/bamboo/bamboo.min.css" type="text/css">
+<link rel="stylesheet" href="https://unpkg.com/bamboo.css" type="text/css">
