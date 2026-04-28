@@ -17,7 +17,7 @@ snippet_fn = 'snippet.txt'
 link_fn = 'link.txt'
 reset_fn = 'reset.css'
 index_fn = 'index.html'
-source_marker = "https://github.com/ubershmekel/cssbed"
+source_marker = "css_link_replace_string"
 
 '''
 <ul>
