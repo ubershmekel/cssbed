@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="https://xi.github.io/mfbs/css/base.css" type="text/css">
+<link rel="stylesheet" href="https://xi.github.io/mfbs/css/form.css" type="text/css">
+<link rel="stylesheet" href="https://xi.github.io/mfbs/css/layout.css" type="text/css">
+<link rel="stylesheet" href="https://xi.github.io/mfbs/css/fontsize.css" type="text/css">
+<link rel="stylesheet" href="https://xi.github.io/mfbs/css/darkmode.css" type="text/css">
